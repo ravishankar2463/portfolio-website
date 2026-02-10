@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+
+  --font-family-sans: Inter, system-ui, sans-serif;
+  --font-family-mono: JetBrains Mono, monospace;
+}
+
+@variant dark (&:where(.dark, .dark *));
+@variant dark (&:is(.dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    @apply transition-colors duration-200;
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-semibold
+           hover:from-primary-700 hover:to-primary-800 
+           shadow-lg hover:shadow-xl
+           transform transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+           dark:from-primary-500 dark:to-primary-600
+           dark:hover:from-primary-600 dark:hover:to-primary-700
+           dark:focus:ring-offset-gray-900;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 
+           rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600
+           hover:border-primary-500 dark:hover:border-primary-500
+           hover:text-primary-600 dark:hover:text-primary-400
+           shadow-lg hover:shadow-xl
+           transform transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2
+           dark:focus:ring-offset-gray-900;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-xl 
+           dark:shadow-2xl dark:shadow-primary-900/10
+           dark:border dark:border-gray-700/50
+           hover:shadow-2xl hover:scale-[1.02]
+           transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-purple-600
+           dark:from-primary-400 dark:to-purple-400;
+  }
+
+  .link-hover {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 
+           after:w-0 after:bg-current after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+}

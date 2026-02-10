@@ -1,0 +1,10 @@
+{
+  "email": "your.email@example.com",
+  "location": "San Francisco, CA",
+  "availability": "Open to opportunities",
+  "social": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "twitter": "https://twitter.com/yourusername"
+  }
+}

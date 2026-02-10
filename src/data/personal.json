@@ -1,0 +1,8 @@
+{
+  "name": "Your Name",
+  "title": "Software Developer",
+  "tagline": "Building modern web applications with passion and precision",
+  "bio": "I'm a software developer specializing in front-end development with React and TypeScript. I love creating beautiful, performant, and accessible user experiences.",
+  "resumeUrl": "/resume.pdf",
+  "image": "/profile.jpg"
+}

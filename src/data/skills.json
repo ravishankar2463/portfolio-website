@@ -1,0 +1,72 @@
+[
+  {
+    "name": "React",
+    "category": "Frontend",
+    "proficiency": 5
+  },
+  {
+    "name": "TypeScript",
+    "category": "Frontend",
+    "proficiency": 5
+  },
+  {
+    "name": "JavaScript",
+    "category": "Frontend",
+    "proficiency": 5
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "proficiency": 4
+  },
+  {
+    "name": "HTML5",
+    "category": "Frontend",
+    "proficiency": 5
+  },
+  {
+    "name": "CSS3",
+    "category": "Frontend",
+    "proficiency": 5
+  },
+  {
+    "name": "Node.js",
+    "category": "Backend",
+    "proficiency": 4
+  },
+  {
+    "name": "Express",
+    "category": "Backend",
+    "proficiency": 4
+  },
+  {
+    "name": "MongoDB",
+    "category": "Backend",
+    "proficiency": 3
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "Backend",
+    "proficiency": 3
+  },
+  {
+    "name": "Git",
+    "category": "Tools",
+    "proficiency": 5
+  },
+  {
+    "name": "VS Code",
+    "category": "Tools",
+    "proficiency": 5
+  },
+  {
+    "name": "Figma",
+    "category": "Design",
+    "proficiency": 4
+  },
+  {
+    "name": "Responsive Design",
+    "category": "Design",
+    "proficiency": 5
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "company": "Tech Company",
+    "companyUrl": "https://example.com",
+    "role": "Senior Frontend Developer",
+    "duration": "2023 - Present",
+    "location": "Remote",
+    "description": "Leading frontend development for a modern web application. Architecting scalable React components, implementing design systems, and mentoring junior developers.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Next.js",
+      "GraphQL"
+    ],
+    "current": true
+  },
+  {
+    "id": "2",
+    "company": "Startup Inc.",
+    "companyUrl": "https://example.com",
+    "role": "Frontend Developer",
+    "duration": "2021 - 2023",
+    "location": "San Francisco, CA",
+    "description": "Developed and maintained multiple client-facing applications. Improved performance by 40% through code optimization and lazy loading. Collaborated with designers to create pixel-perfect UIs.",
+    "technologies": ["React", "JavaScript", "CSS", "Redux", "REST API"],
+    "current": false
+  },
+  {
+    "id": "3",
+    "company": "Web Agency",
+    "companyUrl": "https://example.com",
+    "role": "Junior Web Developer",
+    "duration": "2019 - 2021",
+    "location": "New York, NY",
+    "description": "Built responsive websites for various clients. Worked with WordPress, custom themes, and modern JavaScript frameworks. Gained experience in full project lifecycle from design to deployment.",
+    "technologies": ["HTML", "CSS", "JavaScript", "WordPress", "PHP"],
+    "current": false
+  }
+]
