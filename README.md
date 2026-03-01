@@ -1,73 +1,251 @@
-# React + TypeScript + Vite
+# 🚀 Modern Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.3.1-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.18-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.34.0-FF0055?style=for-the-badge&logo=framer&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A stunning, fully responsive portfolio website built with modern web technologies. Features smooth animations, interactive particles, dark mode, and a clean, professional design.
 
-## React Compiler
+[🌐 Live Demo](https://ravishankar2463.github.io/portfolio-website/) | [📧 Contact](mailto:ravishankar2463@gmail.com) | [💼 LinkedIn](https://www.linkedin.com/in/ravi-shankar-216b101a9/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🎨 **Modern UI/UX** - Clean, professional design with smooth animations
+- 🌓 **Dark Mode** - Seamless light/dark theme switching with system preference detection
+- 🎭 **Interactive Particles** - Dynamic particle field with mouse interaction in hero section
+- 📱 **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
+- ⚡ **Blazing Fast** - Built with Vite for lightning-fast performance
+- 🎬 **Smooth Animations** - Powered by Framer Motion for fluid transitions
+- 🎯 **SEO Optimized** - Meta tags and semantic HTML for better search visibility
+- 📦 **Easy to Customize** - Simple JSON configuration for content updates
+- 🎨 **Gradient Cards** - Eye-catching project cards with colorful gradients
+- 🧭 **Smooth Navigation** - Interactive navbar with scroll progress indicator
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Frontend
+
+- **React 19.2** - Modern UI library with latest features
+- **TypeScript** - Type-safe development experience
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Framer Motion** - Production-ready animation library
+
+### Build Tools
+
+- **Vite** - Next-generation frontend tooling
+- **ESLint** - Code quality and consistency
+- **PostCSS** - CSS transformations
+
+### Deployment
+
+- **GitHub Pages** - Free hosting with custom domain support
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/ravishankar2463/portfolio-website.git
+
+# Navigate to project directory
+cd portfolio-website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The site will be available at `http://localhost:3000/portfolio-website/`
+
+## 🎯 Available Scripts
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## 📁 Project Structure
+
+```
+portfolio-website/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # React components
+│   │   ├── common/      # Reusable components (Button, Card, etc.)
+│   │   ├── layout/      # Layout components (Header, Footer)
+│   │   └── sections/    # Page sections (Hero, Projects, etc.)
+│   ├── context/         # React context (Theme)
+│   ├── data/            # JSON data files (editable content)
+│   │   ├── personal.json
+│   │   ├── projects.json
+│   │   ├── skills.json
+│   │   ├── experience.json
+│   │   ├── expertise.json
+│   │   └── contact.json
+│   ├── hooks/           # Custom React hooks
+│   ├── types/           # TypeScript type definitions
+│   ├── utils/           # Utility functions
+│   ├── App.tsx          # Main app component
+│   └── main.tsx         # Entry point
+├── package.json
+└── vite.config.ts
+```
+
+## 🎨 Customization
+
+### Update Personal Information
+
+Edit `src/data/personal.json`:
+
+```json
+{
+  "name": "Your Name",
+  "title": "Your Job Title",
+  "tagline": "Your tagline",
+  "bio": "Your bio",
+  "resumeUrl": "/path-to-resume.pdf"
+}
+```
+
+### Add/Edit Projects
+
+Edit `src/data/projects.json`:
+
+```json
+{
+  "id": "project-id",
+  "title": "Project Title",
+  "category": "Frontend/Fullstack/Backend",
+  "icon": "🚀",
+  "gradient": "from-blue-500 via-cyan-500 to-teal-500",
+  "description": "Project description",
+  "technologies": ["React", "TypeScript", "..."],
+  "githubUrl": "https://github.com/...",
+  "highlights": ["Feature 1", "Feature 2"]
+}
+```
+
+### Update Skills
+
+Edit `src/data/skills.json` to add or modify your skills with proficiency levels (1-5).
+
+### Modify Experience
+
+Edit `src/data/experience.json` to update your work history.
+
+### Change Contact Info
+
+Edit `src/data/contact.json` with your email, location, and social links.
+
+## 🌐 Deployment
+
+### Deploy to GitHub Pages
+
+1. Update `homepage` in `package.json`:
+
+```json
+"homepage": "https://yourusername.github.io/repository-name"
+```
+
+2. Deploy:
+
+```bash
+npm run deploy
+```
+
+### Deploy to Other Platforms
+
+The build output is in the `dist/` folder after running `npm run build`. You can deploy this folder to:
+
+- **Vercel**: Connect your repo and deploy
+- **Netlify**: Drag and drop the `dist` folder
+- **AWS S3**: Upload the `dist` folder
+- **Any static hosting service**
+
+## 🎨 Color Customization
+
+The project uses Tailwind CSS. Modify colors in `tailwind.config.js`:
 
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+theme: {
+  extend: {
+    colors: {
+      primary: {
+        50: '#eff6ff',
+        // ... your custom colors
+      }
+    }
+  }
+}
 ```
+
+## 📱 Sections
+
+- **Hero** - Eye-catching introduction with interactive particles
+- **Expertise** - Showcase your core competencies
+- **Skills** - Display technologies with proficiency levels
+- **Experience** - Professional work history timeline
+- **Projects** - Feature your best work with gradients
+- **Contact** - Get in touch section with social links
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Ravi Shankar**
+
+- 🌐 Website: [ravishankar2463.github.io/portfolio-website](https://ravishankar2463.github.io/portfolio-website/)
+- 💼 LinkedIn: [Ravi Shankar](https://www.linkedin.com/in/ravi-shankar-216b101a9/)
+- 🐙 GitHub: [@ravishankar2463](https://github.com/ravishankar2463)
+- 📧 Email: ravishankar2463@gmail.com
+
+## 🙏 Acknowledgments
+
+- [React](https://react.dev/) - UI Library
+- [Vite](https://vitejs.dev/) - Build Tool
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Framer Motion](https://www.framer.com/motion/) - Animations
+- [Heroicons](https://heroicons.com/) - Icons
+
+---
+
+<div align="center">
+
+⭐ Star this repo if you found it helpful!
+
+Made with ❤️ by [Ravi Shankar](https://github.com/ravishankar2463)
+
+</div>
