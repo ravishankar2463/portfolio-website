@@ -70,11 +70,71 @@ export const Header = () => {
           {/* Logo/Brand */}
           <motion.a
             href="#home"
-            className="text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            className="flex items-center gap-3 group"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            {personal.name.toUpperCase()}
+            {/* Code-style logo */}
+            <div className="relative flex items-center">
+              {/* Opening bracket */}
+              <motion.span
+                className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-primary-500 to-purple-600 dark:from-primary-400 dark:to-purple-400 bg-clip-text text-transparent"
+                animate={{ rotate: [0, -5, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                &lt;
+              </motion.span>
+
+              {/* Initials with gradient background */}
+              <div className="relative px-2 py-1 mx-1">
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-primary-500/20 via-purple-500/20 to-primary-500/20 dark:from-primary-400/30 dark:via-purple-400/30 dark:to-primary-400/30 rounded-md"
+                  animate={{
+                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  style={{ backgroundSize: "200% 100%" }}
+                />
+                <span className="relative text-xl md:text-2xl font-bold font-mono text-gray-900 dark:text-white tracking-tight">
+                  RS
+                </span>
+              </div>
+
+              {/* Closing bracket */}
+              <motion.span
+                className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-purple-600 to-primary-500 dark:from-purple-400 dark:to-primary-400 bg-clip-text text-transparent"
+                animate={{ rotate: [0, 5, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                }}
+              >
+                /&gt;
+              </motion.span>
+
+              {/* Blinking cursor */}
+              <motion.span
+                className="ml-1 w-0.5 h-6 md:h-7 bg-primary-500 dark:bg-primary-400"
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 1, repeat: Infinity }}
+              />
+            </div>
+
+            {/* Text */}
+            <div className="hidden sm:flex flex-col">
+              <span className="text-base md:text-lg font-bold text-gray-900 dark:text-white tracking-tight leading-none">
+                Ravi Shankar
+              </span>
+              <span className="text-[10px] md:text-xs text-primary-600 dark:text-primary-400 font-semibold tracking-wider uppercase leading-none mt-0.5">
+                Full Stack Dev
+              </span>
+            </div>
           </motion.a>
 
           {/* Desktop Navigation */}
