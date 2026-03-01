@@ -1,8 +1,8 @@
 {
-  "name": "Your Name",
-  "title": "Software Developer",
+  "name": "Ravi Shankar",
+  "title": "Full Stack Developer",
   "tagline": "Building modern web applications with passion and precision",
-  "bio": "I'm a software developer specializing in front-end development with React and TypeScript. I love creating beautiful, performant, and accessible user experiences.",
+  "bio": "I'm a full-stack developer with expertise in Spring and React/Angular. I have a passion for building complex, dynamic web applications that provide exceptional user experiences. My expertise includes Spring framework for server-side development, Spring Security for authentication and access management, ReactJS for client-side development, RESTful APIs, and database design and implementation (SQL, MongoDB, etc.).",
   "resumeUrl": "/resume.pdf",
   "image": "/profile.jpg"
 }

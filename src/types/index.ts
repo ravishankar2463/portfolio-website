@@ -52,3 +52,17 @@ export interface ContactInfo {
   social: SocialLinks;
   availability?: string;
 }
+
+// Projects/Portfolio
+export interface Project {
+  id: string;
+  title: string;
+  category: string;
+  icon: string;
+  gradient: string;
+  description: string;
+  technologies: string[];
+  githubUrl: string;
+  image?: string;
+  highlights?: string[];
+}

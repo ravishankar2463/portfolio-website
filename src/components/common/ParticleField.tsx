@@ -54,14 +54,14 @@ const ParticleField = ({
 
       return {
         particle: isDark
-          ? "rgba(14, 165, 233, 0.8)"
-          : "rgba(14, 165, 233, 0.6)",
+          ? "rgba(14, 165, 233, 0.5)"
+          : "rgba(14, 165, 233, 0.4)",
         connection: isDark
-          ? "rgba(14, 165, 233, 0.15)"
-          : "rgba(14, 165, 233, 0.1)",
+          ? "rgba(14, 165, 233, 0.1)"
+          : "rgba(14, 165, 233, 0.08)",
         mouseConnection: isDark
-          ? "rgba(168, 85, 247, 0.4)"
-          : "rgba(168, 85, 247, 0.3)",
+          ? "rgba(168, 85, 247, 0.3)"
+          : "rgba(168, 85, 247, 0.2)",
       };
     };
 
@@ -204,16 +204,32 @@ const ParticleField = ({
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Initialize particles
+    // Initialize particles with better distribution
     const initParticles = () => {
       particlesRef.current = [];
       const count =
         window.innerWidth < 768 ? Math.floor(particleCount / 2) : particleCount;
 
+      // Calculate grid dimensions for even distribution
+      const cols = Math.ceil(
+        Math.sqrt(count * (canvas.offsetWidth / canvas.offsetHeight)),
+      );
+      const rows = Math.ceil(count / cols);
+      const cellWidth = canvas.offsetWidth / cols;
+      const cellHeight = canvas.offsetHeight / rows;
+
       for (let i = 0; i < count; i++) {
+        // Grid-based positioning with randomness
+        const col = i % cols;
+        const row = Math.floor(i / cols);
+
+        // Random position within grid cell for natural look
+        const x = col * cellWidth + Math.random() * cellWidth;
+        const y = row * cellHeight + Math.random() * cellHeight;
+
         particlesRef.current.push({
-          x: Math.random() * canvas.offsetWidth,
-          y: Math.random() * canvas.offsetHeight,
+          x: Math.max(0, Math.min(canvas.offsetWidth, x)),
+          y: Math.max(0, Math.min(canvas.offsetHeight, y)),
           vx: (Math.random() - 0.5) * particleSpeed,
           vy: (Math.random() - 0.5) * particleSpeed,
           radius: Math.random() * 2 + 1,
@@ -261,8 +277,16 @@ const ParticleField = ({
       parent.addEventListener("mousemove", handleMouseMove);
     }
 
-    // Start continuous animation when in viewport
-    if (isInViewportRef.current) {
+    // Check if element is currently visible and start animation
+    const rect = canvas.getBoundingClientRect();
+    const isVisible =
+      rect.top < window.innerHeight &&
+      rect.bottom > 0 &&
+      rect.left < window.innerWidth &&
+      rect.right > 0;
+
+    if (isVisible) {
+      isInViewportRef.current = true;
       startAnimation();
     }
 
@@ -278,6 +302,7 @@ const ParticleField = ({
       }
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = undefined;
       }
     };
   }, [

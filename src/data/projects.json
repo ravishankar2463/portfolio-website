@@ -1,0 +1,58 @@
+[
+  {
+    "id": "student-dashboard",
+    "title": "Student Dashboard",
+    "category": "Fullstack",
+    "icon": "🎓",
+    "gradient": "from-blue-500 via-cyan-500 to-teal-500",
+    "description": "A Fullstack Application where students can enroll and deregister themselves in different courses. Uses cookie-based authentication to handle Session Management.",
+    "technologies": [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "TypeScript",
+      "Spring Boot",
+      "Spring Security",
+      "Swagger UI"
+    ],
+    "githubUrl": "https://github.com/ravishankar2463/Student-Dashboard",
+    "highlights": [
+      "React with TypeScript for frontend development",
+      "Spring Boot and Spring Security for backend",
+      "Cookie-based session management",
+      "RESTful API with Swagger documentation"
+    ]
+  },
+  {
+    "id": "whos-that-pokemon",
+    "title": "Who's That Pokemon",
+    "category": "Frontend",
+    "icon": "🎮",
+    "gradient": "from-purple-500 via-pink-500 to-red-500",
+    "description": "A dynamic game built using React and the PokeAPI. Features a 10-second timer to guess the correct Pokemon choice. Demonstrates data fetching from third-party APIs and state management.",
+    "technologies": ["React", "JavaScript", "PokeAPI", "CSS"],
+    "githubUrl": "https://github.com/ravishankar2463/whos_that_pokemon",
+    "highlights": [
+      "Real-time data fetching from PokeAPI",
+      "Interactive game mechanics with timer",
+      "State management and props handling",
+      "Dynamic UI updates based on user interaction"
+    ]
+  },
+  {
+    "id": "portfolio-wordpress",
+    "title": "Portfolio Website",
+    "category": "Frontend",
+    "icon": "💼",
+    "gradient": "from-orange-500 via-amber-500 to-yellow-500",
+    "description": "My previous portfolio website built with WordPress, showcasing my projects, skills, and experience. Features custom styling and responsive design.",
+    "technologies": ["WordPress", "PHP", "CSS", "JavaScript"],
+    "githubUrl": "https://github.com/ravishankar2463/portfolio",
+    "highlights": [
+      "Custom WordPress theme development",
+      "Responsive design for all devices",
+      "Project showcase with detailed descriptions",
+      "Contact form integration"
+    ]
+  }
+]
