@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
+import type { ReactNode, MouseEvent } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useState, useRef, MouseEvent } from "react";
+import { useRef } from "react";
 
 interface CardProps {
   children: ReactNode;
@@ -19,7 +19,6 @@ export const Card = ({
   const combinedClasses = `${baseClasses} ${className}`;
 
   const cardRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
 
   // Motion values for mouse position
   const mouseX = useMotionValue(0);
@@ -53,7 +52,6 @@ export const Card = ({
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
     mouseX.set(0);
     mouseY.set(0);
   };
