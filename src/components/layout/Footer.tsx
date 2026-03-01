@@ -12,8 +12,12 @@ export const Footer = () => {
             <p className="text-gray-400 dark:text-gray-500 text-sm">
               © {currentYear} Portfolio. Crafted with ❤️ and React
             </p>
-            <p className="text-gray-500 dark:text-gray-600 text-xs mt-1">
-              All rights reserved.
+            <p className="text-gray-500 dark:text-gray-600 text-xs mt-1 flex items-center justify-center md:justify-start gap-1">
+              Made with the help of{" "}
+              <span className="inline-flex items-center gap-1">
+                <span className="font-medium">GitHub Copilot</span>
+              </span>{" "}
+              & AI ✨
             </p>
           </div>
 
