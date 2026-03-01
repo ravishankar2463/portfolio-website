@@ -62,7 +62,6 @@ export const Card = ({
         ref={cardRef}
         className={combinedClasses}
         onMouseMove={handleMouseMove}
-        onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}
         style={{
           transformStyle: "preserve-3d",
