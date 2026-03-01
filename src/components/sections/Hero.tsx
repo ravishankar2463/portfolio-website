@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Section } from "../common/Section";
 import { Button } from "../common/Button";
+import ParticleField from "../common/ParticleField";
 import personalData from "@data/personal.json";
 import { slideUp, fadeIn } from "../../utils/animations";
 
@@ -12,6 +13,17 @@ export const Hero = () => {
     >
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 opacity-70" />
+
+      {/* Interactive particle field */}
+      <div className="absolute inset-0 z-0">
+        <ParticleField
+          particleCount={80}
+          connectionDistance={130}
+          particleSpeed={0.4}
+          mouseRadius={180}
+          mouseForce={2.5}
+        />
+      </div>
 
       {/* Floating shapes */}
       <motion.div
@@ -40,6 +52,9 @@ export const Hero = () => {
       />
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
+        {/* Text backdrop for better visibility */}
+        <div className="absolute inset-0 bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-3xl -z-10" />
+
         <motion.div
           variants={fadeIn}
           initial="hidden"
@@ -52,16 +67,20 @@ export const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
+            <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium shadow-lg">
               👋 Welcome to my portfolio
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-6xl md:text-8xl font-bold mb-6 leading-tight"
+            className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            style={{
+              textShadow:
+                "0 2px 10px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(14, 165, 233, 0.2)",
+            }}
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-primary-600 to-purple-600 dark:from-white dark:via-primary-400 dark:to-purple-400">
               {personalData.name}
@@ -69,19 +88,25 @@ export const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="text-3xl md:text-4xl font-semibold text-gray-700 dark:text-gray-200 mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-700 dark:text-gray-300 mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            style={{
+              textShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+            }}
           >
             {personalData.title}
           </motion.p>
 
           <motion.p
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 font-light"
+            className="text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-300 mb-6 font-light"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
+            style={{
+              textShadow: "0 1px 6px rgba(0, 0, 0, 0.1)",
+            }}
           >
             {personalData.tagline}
           </motion.p>
@@ -94,7 +119,12 @@ export const Hero = () => {
           transition={{ delay: 0.8 }}
           className="mb-12"
         >
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p
+            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            style={{
+              textShadow: "0 1px 4px rgba(0, 0, 0, 0.1)",
+            }}
+          >
             {personalData.bio}
           </p>
         </motion.div>

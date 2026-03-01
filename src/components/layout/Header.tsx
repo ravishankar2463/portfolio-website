@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { ThemeToggle } from "../common/ThemeToggle";
 import personalData from "@data/personal.json";
 import type { PersonalInfo } from "@type-defs/index";
@@ -9,13 +9,22 @@ const personal = personalData as PersonalInfo;
 const navLinks = [
   { href: "#home", label: "home", index: 0 },
   { href: "#expertise", label: "expertise", index: 1 },
-  { href: "#experience", label: "experience", index: 2 },
-  { href: "#contact", label: "contact", index: 3 },
+  { href: "#skills", label: "skills", index: 2 },
+  { href: "#experience", label: "experience", index: 3 },
+  { href: "#contact", label: "contact", index: 4 },
 ];
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Scroll progress tracking
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +59,11 @@ export const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-600 via-purple-600 to-primary-600 origin-left z-50"
+        style={{ scaleX }}
+      />
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}

@@ -3,6 +3,7 @@ import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import { Hero } from "./components/sections/Hero";
 import { Expertise } from "./components/sections/Expertise";
+import { Skills } from "./components/sections/Skills";
 import { Experience } from "./components/sections/Experience";
 import { Contact } from "./components/sections/Contact";
 
@@ -18,6 +19,7 @@ function App() {
       <main>
         <Hero />
         <Expertise />
+        <Skills />
         <Experience />
         <Contact />
       </main>
